@@ -1,3 +1,8 @@
+import { AppRoutingModule } from './app-routing.module';
+import { WorkersModule } from './workers/workers.module';
+import { AuthModule } from './auth/auth.module';
+import { ComponentsModule } from './components/components.module';
+import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -9,7 +14,12 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    SharedModule
+    AppRoutingModule,
+    SharedModule,
+    CoreModule,
+    ComponentsModule,
+    AuthModule,
+    WorkersModule
   ],
   providers: [],
   bootstrap: [ AppComponent ]
