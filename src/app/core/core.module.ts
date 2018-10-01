@@ -1,6 +1,7 @@
 import { AppRoutingModule } from './../app-routing.module';
 import { SharedModule } from './../shared/shared.module';
 import { NgModule } from '@angular/core';
+import { HeaderComponent } from './components/HeadersComponents/header/header.component';
 
 @NgModule({
   imports: [
@@ -8,10 +9,10 @@ import { NgModule } from '@angular/core';
     SharedModule
   ],
   declarations: [
-
+    HeaderComponent
   ],
   exports: [
-
+    HeaderComponent
   ]
 })
 
