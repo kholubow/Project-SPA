@@ -1,11 +1,6 @@
-#header .search{
-    display: inline-block;
-}
-  
-.navbar>.container .navbar-brand{
-    margin-left: 0;
-}
-  
+/*----------------------
+		#Div class which close all HTML doc
+----------------------*/
 .top-bar {
     padding: 8px 0;
     background: #0f0f11;
@@ -13,6 +8,10 @@
     line-height: 28px;
 }
   
+
+/*----------------------
+		#Phone number top left
+----------------------*/
 .top-number{
     color: #fff;
 }
@@ -21,10 +20,15 @@
     margin: 0
 }
   
+
+/*----------------------
+		#Social links right top
+----------------------*/
 .social{
     text-align: right;
 }
   
+/*  ul - all social links -  */
 .social-share{
    display: inline-block;
    list-style: none;
@@ -36,6 +40,7 @@ ul.social-share li {
     display: inline-block;
 }
   
+/*  image link  */
 ul.social-share li a {
     display: inline-block;
     color: #fff;
@@ -47,53 +52,8 @@ ul.social-share li a {
     border-radius: 2px;
 }
   
+/*  change color on image link hover  */
 ul.social-share li a:hover {
     background: #c52d2f;
     color: #fff;
-}
-  
-.search i {
-    color: #fff;
-}
-  
-input.search-form{
-    background: transparent;
-    border: 0 none;
-    width: 60px;
-    padding: 0 10px;
-    color: #FFF;
-    -webkit-transition: all 400ms;
-    -moz-transition: all 400ms;
-    -ms-transition: all 400ms;
-    -o-transition: all 400ms;
-    transition: all 400ms;
-}
-  
-input.search-form::-webkit-input-placeholder{
-    color: transparent;
-}
-  
-input.search-form:hover::-webkit-input-placeholder {
-    color: #fff;
-}
-  
-input.search-form:hover {
-    width: 180px;
-}
-   
-.navbar {
-    border-radius: 0;
-    margin-bottom: 0;
-    background: #151515;
-    padding: 15px 0;
-    padding-bottom: 0;
-}
-  
-.navbar-nav{
-    margin-top: 12px;
-}
-  
-.navbar-nav>li{
-    margin-left: 35px;
-    padding-bottom: 28px;
 }

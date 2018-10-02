@@ -1,0 +1,71 @@
+/*----------------------
+		#Navbar logo image left
+----------------------*/
+.navbar>.container .navbar-brand{
+    margin-left: 0;
+}
+
+.navbar-inverse .navbar-brand {
+    font-size: 36px;
+    line-height: 50px;
+    color: #fff;
+}
+    
+.navbar-brand {
+    padding: 0;
+    margin:0;
+}
+  
+
+/*----------------------
+		#HTML doc
+----------------------*/
+.navbar {
+    border-radius: 0;
+    margin-bottom: 0;
+    background: #232323;
+    padding: 15px 0;
+    padding-bottom: 0;
+}
+  
+.navbar-inverse {
+    border: none;
+}
+
+
+/*----------------------
+		#Navbar links
+----------------------*/
+.navbar-nav>li{
+    margin-left: 35px;
+    padding-bottom: 28px;
+    list-style: none;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    padding: 5px 12px;
+    margin: 0;
+    border-radius: 3px;
+    color: #fff;
+    line-height: 24px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover{
+    background-color: #c52d2f;
+    color: #fff;
+}
+
+
+/*----------------------
+		#Settings for all navbar links
+----------------------*/
+.navbar-nav{
+    margin-top: 12px;
+}
+
+.navbar-inverse .navbar-collapse {
+    border-top: 0;
+    padding-bottom: 0;
+}

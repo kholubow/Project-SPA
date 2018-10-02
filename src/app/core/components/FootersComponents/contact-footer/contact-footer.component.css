@@ -1,0 +1,20 @@
+/*----------------------
+		#HTML doc
+----------------------*/
+#main-contact-info {
+  background: #A4A4A4 no-repeat 90% 0;
+  padding: 30px 0;
+}
+
+
+/*----------------------
+		#Contact-info text settings
+----------------------*/
+.contact-info {
+  color:#000;
+}
+
+.contact-info h2 {
+  margin-top: 0;
+  color: #000;
+}
