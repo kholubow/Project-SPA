@@ -1,0 +1,33 @@
+/*----------------------
+		#HTML doc
+----------------------*/
+#footer {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: #fff;
+  background: #2e2e2e;
+}
+
+/*  footer link  */
+#footer a {
+  color: #fff;
+}
+
+#footer a:hover {
+  color: #c52d2f;
+}
+
+/* link list */
+#footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+/*----------------------
+		#Responsive
+----------------------*/
+#footer .col-sm-6 {
+    text-align: center;
+} 

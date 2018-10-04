@@ -69,3 +69,16 @@
     border-top: 0;
     padding-bottom: 0;
 }
+
+
+/*----------------------
+		#Responsive
+----------------------*/
+@media screen and (max-width: 767px) {
+  .navbar-brand {
+        display: none;
+  }
+  .navbar {
+        padding: 0;
+  }
+}

@@ -1,6 +1,7 @@
 import { AppRoutingModule } from './../app-routing.module';
 import { SharedModule } from './../shared/shared.module';
 import { NgModule } from '@angular/core';
+import { SigninComponent } from './components/signin/signin.component';
 
 @NgModule({
   imports: [
@@ -8,13 +9,10 @@ import { NgModule } from '@angular/core';
     SharedModule
   ],
   declarations: [
-
-  ],
-  providers: [ 
-
+    SigninComponent
   ],
   exports: [
-
+    SigninComponent
   ]
 })
 

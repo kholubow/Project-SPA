@@ -1,0 +1,97 @@
+/*----------------------
+		#Classes for all HTML document
+----------------------*/
+body {
+	margin:0;
+	color:#6a6f8c;
+	background: no-repeat center;
+	font:600 16px/18px 'Open Sans',sans-serif;
+}
+
+.login-wrap {
+	width:100%;
+	margin:auto;
+	max-width:600px;
+	min-height:1000px;
+	position:relative;
+	background: no-repeat center;
+}
+
+.login-html {
+	width:100%;
+	height:100%;
+	position:absolute;
+	padding:90px 70px 50px 70px;
+	background:rgba(40,57,101,.9);
+}
+
+
+/*----------------------
+		#Form title
+----------------------*/
+.title {
+    text-transform:uppercase;
+    font-size: 55px;
+}
+
+
+/*----------------------
+		#Form
+----------------------*/
+.login-form {
+	min-height:345px;
+	position:relative;
+	perspective:1000px;
+	transform-style:preserve-3d;
+}
+
+/*  Settings for all form div main groups - 3 groups  */
+.login-form .group {
+	margin-bottom:15px;
+}
+
+/*  Settings - looking of inputs fields and buttons */
+.login-form .group .label,
+.login-form .group .input,
+.login-form .group .button {
+	width:100%;
+	color:#fff;
+    display:block;
+}
+
+/*  Settings - font styles - labels (titles of inputs), buttons for user */
+.login-form .group .label,
+.login-form .group .button {
+    text-transform:uppercase;
+}
+
+/*  Settings - looking of inputs fields and buttons */
+.login-form .group .input,
+.login-form .group .button {
+	border:none;
+	padding:15px 20px;
+	border-radius:25px;
+	background:rgba(255,255,255,.1);
+}
+
+/*  Settings - for input in one of the groups - password - hiding the letters */
+.login-form .group input[data-type="password"] {
+	text-security:circle;
+	-webkit-text-security:circle;
+}
+
+.login-form .group .label{
+	color:#aaa;
+	font-size:12px;
+}
+
+.login-form .group .button{
+	background:#1161ee;
+}
+
+/*  Settings - underline form  */
+.hr {
+	height:3px;
+	margin:60px 0 50px 0;
+	background:rgba(255,255,255,.2);
+}

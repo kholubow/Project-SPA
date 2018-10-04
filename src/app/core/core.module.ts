@@ -5,6 +5,7 @@ import { HeaderComponent } from './components/HeadersComponents/header/header.co
 import { MainHeaderComponent } from './components/HeadersComponents/main-header/main-header.component';
 import { LoggedInHeaderComponent } from './components/HeadersComponents/logged-in-header/logged-in-header.component';
 import { ContactFooterComponent } from './components/FootersComponents/contact-footer/contact-footer.component';
+import { AboutFooterComponent } from './components/FootersComponents/about-footer/about-footer.component';
 
 @NgModule({
   imports: [
@@ -15,13 +16,15 @@ import { ContactFooterComponent } from './components/FootersComponents/contact-f
     HeaderComponent,
     MainHeaderComponent,
     LoggedInHeaderComponent,
-    ContactFooterComponent
+    ContactFooterComponent,
+    AboutFooterComponent
   ],
   exports: [
     HeaderComponent,
     MainHeaderComponent,
     LoggedInHeaderComponent,
-    ContactFooterComponent
+    ContactFooterComponent,
+    AboutFooterComponent
   ]
 })
 

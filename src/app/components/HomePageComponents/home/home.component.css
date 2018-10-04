@@ -52,3 +52,14 @@
 .services-wrap .pull-left {
     margin-right: 20px;
 }
+
+
+/*----------------------
+		#Responsive
+----------------------*/
+@media screen and (max-width: 991px) {
+  .services-wrap {
+        margin-left: 50%;
+        margin: 0 0 40px;
+  }
+}
