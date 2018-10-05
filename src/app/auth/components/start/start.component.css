@@ -1,0 +1,140 @@
+/*----------------------
+		#Classes for all HTML document
+----------------------*/
+body {
+    font-family: arial, verdana;
+    height: 900px;
+	background: 
+		linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
+}
+
+/*  Main form class  */
+#start-form {
+	height: 800px;
+	width: 800px;
+	margin: 0px auto;
+	text-align: center;
+	position: relative;
+}
+
+
+/*----------------------
+		#Form
+----------------------*/
+/* free space on top */
+div.centre {
+  margin-left: 3%;
+  margin-right: -7%;
+  height: 250px;
+}
+
+/* main form class for all elements inside form */
+div.welcome-page {
+	background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	box-sizing: border-box;
+	height: 35%;
+	width: 80%;
+	margin: 0 10%;
+	position: relative;
+}
+
+/* span - text block */
+span.help-block {
+    color:green;
+    font-size:20px;
+    margin-top:24%;
+}
+
+/* input class - button */
+#start-form input {
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: arial;
+	color: #2C3E50;
+	font-size: 13px;
+}
+
+/* settings - back button */
+#start-form .action-button {
+	width: 100px;
+	background: #27AE60;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+}
+
+/* settings - back button - on mouse hover, focus */
+#start-form .action-button:hover, 
+#start-form .action-button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+
+
+/*----------------------
+		#Responsive
+----------------------*/
+@media screen and (max-width: 928px) {
+    #start-form {
+        height: 650px;
+        width: 650px;
+    }
+}
+
+@media screen and (max-width: 757px) {
+    #start-form {
+        height: 600px;
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #start-form {
+        margin: 0 10px 0 10px;
+    }
+    div.welcome-page {
+        margin: 0 10px 0 10px;
+    }
+    div.centre {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 626px) {
+    img {
+        display: none;
+    }
+    #start-form {
+        height: 500px;
+        width: 500px;
+    }
+    span.help-block {
+        margin-top: 8%;
+    }
+}
+
+@media screen and (max-width: 526px) {
+    #start-form {
+        height: 300px;
+        width: 300px;
+    }
+    span.help-block {
+        margin-top: -10%;
+        font-size: 15px;
+    }
+    #start-form .action-button {
+        margin: 0;
+        padding: 5px 2px;
+    }
+}
