@@ -1,3 +1,4 @@
+import { AuthService } from './shared/services/auth.service';
 import { AppRoutingModule } from './../app-routing.module';
 import { SharedModule } from './../shared/shared.module';
 import { NgModule } from '@angular/core';
@@ -15,6 +16,7 @@ import { EndComponent } from './components/end/end.component';
     StartComponent,
     EndComponent
   ],
+  providers: [ AuthService ],
   exports: [
     SigninComponent,
     StartComponent,

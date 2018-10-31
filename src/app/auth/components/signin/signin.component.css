@@ -42,7 +42,6 @@ body {
 	min-height:345px;
 	position:relative;
 	perspective:1000px;
-	transform-style:preserve-3d;
 }
 
 /*  Settings for all form div main groups - 3 groups  */

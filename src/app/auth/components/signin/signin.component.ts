@@ -17,11 +17,9 @@ backgroundImagePath: string;
   }
 
   onSignIn(form: NgForm) {
-      
+    const username = form.value.username;
+    const pass = form.value.pass;   
   }
 
-  testAlertify() {
-      this.alertify.success('Zalogowales sie poprawnie');
-  }
 
 }
