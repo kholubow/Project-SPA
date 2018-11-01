@@ -1,3 +1,4 @@
+import { AuthService } from './../../../../auth/shared/services/auth.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainHeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(public authService: AuthService) { }
 
   ngOnInit() {
   }
+
+  
+  logout() {
+      this.authService.logout();
+  }
+
+
+  chechIfSomeUserIsLoggedInViaToken() {
+      return this.authService.chechIfSomeUserIsLoggedInViaDownloadedToken();
+  }  
 
 }

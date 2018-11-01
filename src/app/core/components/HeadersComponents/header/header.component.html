@@ -48,6 +48,11 @@
                             </ul>
                     </div>
                 </div>
+                    <span class="help-block" 
+                          style="color:green;font-size:25px;margin-left:50%;"
+                          *ngIf="(chechIfSomeUserIsLoggedInViaToken())">
+                          {{authService.decodedToken.unique_name}} - WITAJ
+                    </span>
             </div>
 
 
