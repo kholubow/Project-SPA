@@ -1,0 +1,201 @@
+<body [ngStyle]="{'background-image': 'url(' + backgroundImagePath + ')'}">
+    <div class="login-wrap">
+        <div class="login-html">
+
+
+		        <i class="fa fa-vcard" 
+		           style="font-size:55px">
+		        </i>
+
+		        <label class="title">
+			             Rejestracja
+		        </label>
+
+
+		        <div class="login-form">
+
+                  <form (ngSubmit)="onSignUp()" 
+                        [formGroup] = "registerForm">
+
+                          <div class = "group">
+                                  <label for="username" 
+                                         class="label">
+                                         Imię
+                                  </label>
+                                  <input type = "text"
+                                         class = "input"
+                                         formControlName = "username" />
+                                  <span class = "help-block" 
+                                        *ngIf = "registerForm.get('username').errors && registerForm.get('username').touched" 
+                                        style = "color:red;">
+                                        Proszę wpisać imię
+                                  </span>
+                          </div>
+
+                          <div class = "group">
+                                  <label for="userSurname" 
+                                         class="label">
+                                         Nazwisko
+                                  </label>
+                                  <input type = "text"
+                                         class = "input"
+                                         formControlName = "userSurname" />
+                                  <span class = "help-block" 
+                                        *ngIf = "registerForm.get('userSurname').errors && registerForm.get('userSurname').touched" 
+                                        style = "color:red;">
+                                        Proszę wpisać nazwisko
+                                  </span>
+                          </div>
+
+                          <div class = "group">
+                                  <label for="password" 
+                                         class="label">
+                                         Hasło
+                                  </label>
+                                  <input type = "password"
+                                         class = "input"
+                                         formControlName = "password" />
+                                  <span class = "help-block" 
+                                        *ngIf = "registerForm.get('password').hasError('required') && registerForm.get('password').touched" 
+                                        style = "color:red;" >
+                                        Proszę podać hasło
+                                  </span>
+                                  <span class = "help-block" 
+                                        *ngIf = "registerForm.get('password').hasError('minlength') && registerForm.get('password').touched" 
+                                        style = "color:red;" >
+                                        Hasło musi zawierać co najmniej 4 znaki
+                                  </span>
+                                  <span class = "help-block" 
+                                        *ngIf = "registerForm.get('password').hasError('maxlength') && registerForm.get('password').touched" 
+                                        style = "color:red;" >
+                                        Hasło nie może przekraczać 8 znaków
+                                  </span>
+                          </div>
+
+                          <div class = "group">
+                                  <label for="passrep" 
+                                         class="label">
+                                         Wpisz ponownie hasło
+                                  </label>
+                                  <input type = "password"
+                                         class = "input"
+                                         formControlName = "confirmPassword" />
+                                  <span class = "help-block" 
+                                        *ngIf = "registerForm.get('confirmPassword').hasError('required') && registerForm.get('confirmPassword').touched" 
+                                        style = "color:red;" >
+                                        Wpisz ponownie hasło
+                                  </span>
+                                  <span class = "help-block" 
+                                        *ngIf = "registerForm.get('confirmPassword').touched && registerForm.hasError('mismatch')" 
+                                        style = "color:red;" >
+                                        Hasło musi się zgadzać z tym podanym wcześniej
+                                  </span>
+                          </div>
+
+                          <div class="group">
+                                  <label class="control-label" 
+                                         style="margin-right:10px" >
+                                         Płeć 
+                                  </label>
+                                  <label class="radio-inline">
+                                  <input class="mr-3" 
+                                         type="radio" 
+                                         value="male" 
+                                         formControlName="gender" >
+                                         Mężczyzna
+                                  </label>
+                                  <label class="radio-inline" >
+                                  <input class="mr-3" 
+                                         type="radio" 
+                                         value="female" 
+                                         formControlName="gender" >
+                                         Kobieta
+                                  </label>
+                          </div>
+
+                          <div class="group">
+                                  <input class="input"
+                                         placeholder="Miasto" 
+                                         formControlName="city" >
+                                  <span class = "help-block" 
+                                        *ngIf = "registerForm.get('city').touched && registerForm.get('city').hasError('required') || registerForm.get('city').errors && registerForm.get('city').touched" 
+                                        style = "color:red;" >
+                                        Podanie miejscowości jest wymagane
+                                  </span>                         
+                          </div>
+
+                          <div class="group">
+                                  <input class="input"
+                                         placeholder="Państwo" 
+                                         formControlName="country" >
+                                  <span class = "help-block" 
+                                        *ngIf = "registerForm.get('country').touched && registerForm.get('country').hasError('required') || registerForm.get('country').errors && registerForm.get('country').touched" 
+                                        style = "color:red;" >
+                                        Podanie państwa jest wymagane
+                                  </span>
+                          </div>
+
+                          <div class="group">
+                                  <input class = "input"
+                                         placeholder = "Data urodzin" 
+                                         formControlName = "dateOfBirth" 
+                                         type = "text"
+                                         bsDatepicker
+                                         [bsConfig] = "bsConfig" >
+                                  <span class = "help-block" 
+                                        *ngIf = "registerForm.get('dateOfBirth').touched && registerForm.get('dateOfBirth').hasError('required') || registerForm.get('dateOfBirth').errors && registerForm.get('dateOfBirth').touched" 
+                                        style = "color:red;" >
+                                        Data urodzin jest wymagana
+                                  </span>
+                          </div>
+
+                          <div class="group">
+                                  <textarea class = "input" 
+                                            placeholder="Opis" 
+                                            rows = "6" 
+                                            formControlName="introduction" >
+                                  </textarea>
+                                  <span class = "help-block" 
+                                        *ngIf = "registerForm.get('introduction').touched && registerForm.get('introduction').hasError('required') || registerForm.get('introduction').errors && registerForm.get('introduction').touched" 
+                                        style = "color:red;" >
+                                        Podanie swojego opisu jest wymagane
+                                  </span>
+                          </div>
+
+                          <div class="group">
+                                  <textarea class = "input" 
+                                            placeholder="Zainteresowania" 
+                                            rows = "6" 
+                                            formControlName="interests" >
+                                  </textarea>
+                                  <span class = "help-block" 
+                                        *ngIf = "registerForm.get('interests').touched && registerForm.get('interests').hasError('required') || registerForm.get('interests').errors && registerForm.get('interests').touched" 
+                                        style = "color:red;" >
+                                        Podanie swoich zainteresowań jest wymagane
+                                  </span>
+                          </div>
+                        
+                          <div class="group">
+                              <input type="submit" 
+                                     class="button" 
+                                     value="Zarejestruj się" 
+                                     [disabled]="!registerForm.valid">
+                          </div>
+                  </form>
+                  <div class="hr">
+
+                  </div>
+        
+		        </div>
+
+
+        </div>
+  
+	<img src="assets/images/partners/partner1.png" 
+           align="left" 
+	     style="position:absolute; top:90%; left:5%;">
+	<img src="assets/images/partners/partner4.png" 
+	     align="right" 
+           style="position:absolute; top:92%; right:5%;"> 
+    </div>
+</body>

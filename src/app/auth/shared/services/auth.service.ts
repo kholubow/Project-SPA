@@ -1,3 +1,4 @@
+import { User } from './../../../shared/models/User';
 import { AlertifyService } from './../../../shared/services/alertify.service';
 import { Http, RequestOptions, Headers, Response } from '@angular/http';
 import { tokenNotExpired, JwtHelper } from 'angular2-jwt';
@@ -34,12 +35,8 @@ export class AuthService {
   }
 
 
-  signup(username: string, password: string) {
-
-  }
-
-  register() {
-
+  register(user: User) {
+      return this.http.post(this.baseUrl + 'auth/register', user, this.requestOptions());
   }
 
 
@@ -59,7 +56,6 @@ export class AuthService {
   }
 
 
-
   logout() {
       this.userToken = null;
       localStorage.removeItem('token');
@@ -67,7 +63,6 @@ export class AuthService {
       this.alertify.success('Wylogowales sie poprawnie');
       this.router.navigate(['/end']);
   }
-
 
 
   chechIfSomeUserIsLoggedInViaDownloadedToken() {

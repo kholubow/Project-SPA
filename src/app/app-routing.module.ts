@@ -1,3 +1,4 @@
+import { SignupComponent } from './auth/components/signup/signup.component';
 import { InstanceComponent } from './workers/components/instance/instance.component';
 import { MessagesComponent } from './workers/components/messages/messages.component';
 import { AllWorkersComponent } from './workers/components/all-workers/all-workers.component';
@@ -12,6 +13,7 @@ const appRoutes: Routes = [
 
     { path: '', component: HomeComponent },
     { path: 'logowanie', component: SigninComponent },
+    { path: 'rejestracja', component: SignupComponent },
     { path: 'start', component: StartComponent },
     { path: 'end', component: EndComponent },
     { path: 'wszyscy', component: AllWorkersComponent },
