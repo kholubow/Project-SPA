@@ -1,3 +1,4 @@
+import { AlertifyService } from './../../../shared/services/alertify.service';
 import { User } from './../../../shared/models/User';
 import { AuthService } from './../../shared/services/auth.service';
 import { Component, OnInit } from '@angular/core';
@@ -17,6 +18,7 @@ bsConfig: Partial<BsDatepickerConfig>;
 user: User;
 
   constructor(public authService: AuthService,
+              private alertify: AlertifyService,
               private router: Router,
               private fb: FormBuilder) { }
 
@@ -49,10 +51,22 @@ user: User;
   }
 
 
-  onSignUp() {
-
+  passwordMatchValidator(g: FormGroup) {
+      return g.get('password').value === g.get('confirmPassword').value ? null : {'mismatch': true};
   }
 
+
+  onSignUp() {
+      if (this.registerForm.valid) {
+          this.user = Object.assign({}, this.registerForm.value);
+          this.authService.register(this.user).subscribe(() => {
+            this.alertify.success('Rejestracja przebiegła pomyślnie');
+            this.router.navigate(['/logowanie']);
+          }, error => {
+            this.alertify.error('Wystąpił błąd podczas rejestracji');
+          });
+          }
+  }
 
 
 }
