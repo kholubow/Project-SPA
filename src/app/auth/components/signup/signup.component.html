@@ -4,7 +4,7 @@
 
 
 		        <i class="fa fa-vcard" 
-		           style="font-size:55px">
+		           style="font-size:40px">
 		        </i>
 
 		        <label class="title">
@@ -16,6 +16,8 @@
 
                   <form (ngSubmit)="onSignUp()" 
                         [formGroup] = "registerForm">
+
+                     <div class = "scroll">
 
                           <div class = "group">
                                   <label for="username" 
@@ -181,6 +183,9 @@
                                      value="Zarejestruj się" 
                                      [disabled]="!registerForm.valid">
                           </div>
+
+                     </div>
+                     
                   </form>
 
         
