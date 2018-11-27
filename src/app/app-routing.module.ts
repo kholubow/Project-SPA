@@ -1,3 +1,4 @@
+import { WorkerDetailComponent } from './workers/components/worker-detail/worker-detail.component';
 import { SignupComponent } from './auth/components/signup/signup.component';
 import { InstanceComponent } from './workers/components/instance/instance.component';
 import { MessagesComponent } from './workers/components/messages/messages.component';
@@ -22,6 +23,7 @@ const appRoutes: Routes = [
     { path: 'messages', component: MessagesComponent },
     { path: 'wnioski', component: InstanceComponent },
     { path: 'edytuj-profil', component: EditProfileComponent },
+    { path: 'dane-profilu', component: WorkerDetailComponent },
     { path: '**', component: PageNotFoundComponent }
 
 ];

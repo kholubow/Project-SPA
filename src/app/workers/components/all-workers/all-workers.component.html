@@ -1,3 +1,18 @@
 <body [ngStyle]="{'background-image': 'url(' + bgAllWorkers + ')'}">
 
+    <div class="row equal">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class = "scroll">
+          
+              <div *ngFor="let user of users" 
+                    class="col-lg-2 col-md-3 col-sm-6">
+                          <app-worker-card [user]="user">
+                                
+                          </app-worker-card>
+              </div>
+  
+            </div>
+        </div>
+    </div>
+
 </body>

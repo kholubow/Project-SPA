@@ -1,3 +1,4 @@
+import { UserService } from './services/user.service';
 import { AlertifyService } from './services/alertify.service';
 import { BsDatepickerModule } from 'ngx-bootstrap';
 import { BrowserModule } from '@angular/platform-browser';
@@ -18,7 +19,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     PageNotFoundComponent
   ],
   providers: [
-    AlertifyService
+    AlertifyService,
+    UserService
   ],
   exports: [
     BrowserModule,

@@ -1,0 +1,19 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+
+        <div class="panel-image">
+          <img src="{{ user.photos[0].url || '../../../assets/user.png'}}"
+               alt=""
+               class="center">
+               <ul class="list-inline member-icons animate text-center">
+                    <li>
+                        <button class="btn btn-primary">
+                                    <i class="fa fa-id-badge">
+                                    </i>
+                                Zobacz Profil: {{ user.username }}
+                        </button>
+                    </li>
+              </ul>
+        </div>
+    </div>
+</div>

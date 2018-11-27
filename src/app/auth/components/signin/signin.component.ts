@@ -20,7 +20,7 @@ backgroundImagePath: string;
 
   onSignIn(form: NgForm) {
     const username = form.value.username;
-    const pass = form.value.pass;   
+    const pass = form.value.pass;
 
     this.authService.login(username, pass).subscribe(data => {
       this.alertify.success('Zalogowałeś się poprawnie');

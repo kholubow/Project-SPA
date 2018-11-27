@@ -5,6 +5,8 @@ import { AllWorkersComponent } from './components/all-workers/all-workers.compon
 import { MessagesComponent } from './components/messages/messages.component';
 import { InstanceComponent } from './components/instance/instance.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
+import { WorkerCardComponent } from './components/worker-card/worker-card.component';
+import { WorkerDetailComponent } from './components/worker-detail/worker-detail.component';
 
 @NgModule({
   imports: [
@@ -15,7 +17,9 @@ import { EditProfileComponent } from './components/edit-profile/edit-profile.com
     AllWorkersComponent,
     MessagesComponent,
     InstanceComponent,
-    EditProfileComponent
+    EditProfileComponent,
+    WorkerCardComponent,
+    WorkerDetailComponent
   ],
   providers: [
 
@@ -24,7 +28,9 @@ import { EditProfileComponent } from './components/edit-profile/edit-profile.com
     AllWorkersComponent,
     MessagesComponent,
     InstanceComponent,
-    EditProfileComponent
+    EditProfileComponent,
+    WorkerCardComponent,
+    WorkerDetailComponent
   ],
 })
 
