@@ -1,34 +1,59 @@
 <body [ngStyle]="{'background-image': 'url(' + bgWorkerDetail + ')'}">
 
-    <div class = "row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div class = "text-center">
-        
-            <div class = "image center">
-                <img src="{{'../../../assets/user.png'}}"
-                     alt=""
-                     class="center">
+       
+            <div class = "info-block center">
+                    <div class = "image center">
+                            <img src="{{'../../../assets/user.png'}}"
+                                 alt=""
+                                 class="center">
+                    </div>
+                    <div class = "info-block-element">
+                            <i class="fa fa-drivers-license-o"
+                               (click) = "onClickName()">
+                               Imie
+                            </i>
+                            <i class="fa fa-vcard"
+                               (click) = "onClickSurname()">
+                               Nazwisko
+                            </i>
+                            <i class="fa fa-child"
+                               (click) = "onClickDateOfBirth()">
+                               Data urodzenia
+                            </i>
+                            <i class="fa fa-building"
+                               (click) = "onClickCity()">
+                               Miejscowość
+                            </i>
+                            <i class="fa fa-map"
+                               (click) = "onClickCountry()">
+                               Państwo
+                            </i>
+                            <i class="fa fa-venus-mars"
+                               (click) = "onClickGender()">
+                               Płeć
+                            </i>
+                            <i class="fa fa-lightbulb-o"
+                               (click) = "onClickInterests()">
+                               Zainteresowania
+                            </i>
+                            <i class="fa fa-street-view"
+                               (click) = "onClickIntroduction()">
+                               Opis
+                            </i>
+                    </div>
+                    <p *ngIf = "(chooseInfo == 'name')">
+                           xmskxmsklxmskxmsklxsmxklsmxklmxkl
+                           ospksopxksoxksopxkspoksopxsoxksks
+                           sxksoxkspoxkspoxksxposkx
+                           skxposxkospx
+                           skpsoxkxsopkxspoksxopksxpsxokp
+                    </p>
+                    <p *ngIf = "(chooseInfo == 'gender')">
+                           xmskxmsklxmskxmsklxsmxklsmxklmxkl
+                    </p>
             </div>
 
-
-            <div class = "info">
-                <i class="fa fa-building"
-                   style="font-size:45px">
-                   - Miasto
-                </i>
-                <div class = "content animate center-info-block">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-                        laboris nisi ut aliquip ex ea commodo consequat. 
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. 
-                </div>
-            </div>
-
-
         </div>
-        </div>
-    </div>
 
 </body>
