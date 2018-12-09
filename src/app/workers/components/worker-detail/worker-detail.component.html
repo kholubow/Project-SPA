@@ -4,7 +4,7 @@
        
             <div class = "info-block center">
                     <div class = "image center">
-                            <img src="{{'../../../assets/user.png'}}"
+                            <img src="{{ user.photos[0].url || '../../../assets/user.png'}}"
                                  alt=""
                                  class="center">
                     </div>
@@ -43,43 +43,28 @@
                             </i>
                     </div>
                     <p *ngIf = "(chooseInfo == 'name')">
-                           name
+                           {{ user.username }}
                     </p>
                     <p *ngIf = "(chooseInfo == 'gender')">
-                           gender
-                           xmskxmsklxmskxmsklxsmxklsmxklmxkl
+                           {{ user.gender }}
                     </p>
                     <p *ngIf = "(chooseInfo == 'city')">
-                           city
-                           xmskxmsklxmskxmsklxsmxklsmxklmxkl
+                           {{ user.city }}
                     </p>
                     <p *ngIf = "(chooseInfo == 'country')">
-                           country
-                           xmskxmsklxmskxmsklxsmxklsmxklmxkl
-                           ospksopxksoxksopxkspoksopxsoxksks
-                           sxksoxkspoxkspoxksxposkx
-                           skxposxkospx
-                           skpsoxkxsopkxspoksxopksxpsxokp
+                           {{ user.country }}
                     </p>
                     <p *ngIf = "(chooseInfo == 'interests')">
-                           interests
-                           xmskxmsklxmskxmsklxsmxklsmxklmxkl
-                           ospksopxksoxksopxkspoksopxsoxksks
-                           sxksoxkspoxkspoxksxposkx
-                           skxposxkospx
-                           skpsoxkxsopkxspoksxopksxpsxokp
+                           {{ user.interests }}
                     </p>
                     <p *ngIf = "(chooseInfo == 'introduction')">
-                           introduction
-                           xmskxmsklxmskxmsklxsmxklsmxklmxkl
+                           {{ user.introduction }}
                     </p>
                     <p *ngIf = "(chooseInfo == 'surname')">
-                           surname
-                           xmskxmsklxmskxmsklxsmxklsmxklmxkl
+                           {{ user.userSurname }}
                     </p>
                     <p *ngIf = "(chooseInfo == 'dateOfBirth')">
-                           dateOfBirth
-                           xmskxmsklxmskxmsklxsmxklsmxklmxkl
+                           {{ user.dateOfBirth }}
                     </p>
             </div>
 

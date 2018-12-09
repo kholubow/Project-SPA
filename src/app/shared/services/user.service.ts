@@ -2,13 +2,16 @@ import { Injectable } from '@angular/core';
 import { RequestOptions, Headers, Http } from '@angular/http';
 import { User } from './../models/User';
 import { Observable } from 'rxjs/Observable';
+import { Router } from '@angular/router';
 
 @Injectable()
 export class UserService {
 
 baseUrl = 'http://localhost:5000/api/';
+user: User;
 
-constructor(private http: Http) {}
+constructor(private http: Http,
+            private router: Router) {}
 
 
     getUsers(): Observable<User[]> {
@@ -16,6 +19,14 @@ constructor(private http: Http) {}
                         .map(response => <User[]>response.json());
     }
 
+    onShowDetailedDataAboutChosenUser() {
+        return this.user;
+    }
+
+    onLoadDetailedDataAboutChosenUser(user: User) {
+        this.user = user;
+        this.router.navigate(['dane-profilu']);
+    }
 
     private jwt() {
         let token = localStorage.getItem('token');

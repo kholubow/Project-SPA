@@ -1,3 +1,4 @@
+import { UserService } from './../../../shared/services/user.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { User } from '../../../shared/models/User';
 
@@ -10,13 +11,13 @@ export class WorkerCardComponent implements OnInit {
 
   @Input() user: User;
 
-  constructor() { }
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
   }
 
   onShowDetailedDataAboutChosenUser() {
-    console.log(this.user);
+    this.userService.onLoadDetailedDataAboutChosenUser(this.user);
   }
 
 }
