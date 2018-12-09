@@ -1,3 +1,4 @@
+/* Settings for all HTML page */
 body {
     margin:0;
     color:black;
@@ -15,6 +16,7 @@ img {
 	max-width: 350px;
 }
 
+/* User photo only inside of box */
 .image {
     overflow: hidden;
 	position: relative;
@@ -22,6 +24,7 @@ img {
 	max-width: 350px;
 }
 
+/* User photo in center of page */
 .center {
     display: block;
     margin-left: auto;
@@ -33,6 +36,7 @@ img {
 /*----------------------
 	   #Info blocks
 ----------------------*/
+/* Close all detail info elements about the user */
 .info-block {
 	margin-top: 0;
 	height: 1000px;
@@ -40,6 +44,7 @@ img {
 	background-color: rgba(13, 112, 130, 0.7);
 }
 
+/* choosable info menu */
 .info-block-element {
 	margin-left: 0;
 	height: 720px;
@@ -47,6 +52,7 @@ img {
 	background-color: rgba(9, 19, 104, 0.7);
 }
 
+/* choosable links */
 i {
 	font-size:30px;
 	margin-top: 25px;
@@ -54,15 +60,17 @@ i {
 	cursor: pointer;
 }
 
+/* choosable links on hover by cursor */
 i:hover {
     color: #f1f1f1;
     background-color: rgba(9, 81, 196, 0.5); 
 }
 
+/* Detailed data about the user */
 p {
 	max-width: 50%;
 	margin: 0 50%;
-	margin-top: -80%;
+	margin-top: -110%;
 }
 
 
@@ -80,4 +88,74 @@ p {
 	margin-left: 0;
 	padding-left: 0;
 	padding-right: 0;
+}
+
+@media (max-width: 667px) {
+	i {
+		font-size: 25px;
+	}
+	p {
+		font-size: 15px;
+		margin-top: -118%;
+	}
+	.info-block {
+		width: 605px;
+	}
+}
+
+@media (max-width: 622px) {
+	.info-block {
+		width: 500px;
+	}
+	p {
+		margin-top: -143%;
+		margin-left: 40%;
+	}
+	.info-block-element {
+		width: 197px;
+	}
+}
+
+@media (max-width: 517px) {
+	.info-block {
+		width: 320px;
+	}
+	p {
+		margin-top: -248%;
+		margin-left: 70%;
+		font-size: 16px;
+		text-orientation: mixed;
+		writing-mode: vertical-rl;
+		max-height: 796px;
+		-webkit-transform: rotate(-180deg);
+	}
+	.info-block-element {
+		width: 150px;
+		height: 796px;
+	}
+	i {
+		font-size: 19px;
+	}
+}
+
+@media (max-width: 337px) {
+	.info-block {
+		width: 260px;
+	}
+	p {
+		margin-top: -320%;
+		margin-left: 64%;
+		font-size: 14px;
+		text-orientation: mixed;
+		writing-mode: vertical-rl;
+		max-height: 834px;
+		-webkit-transform: rotate(-180deg);
+	}
+	.info-block-element {
+		width: 118px;
+		height: 834px;
+	}
+	i {
+		font-size: 15px;
+	}
 }

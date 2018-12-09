@@ -15,4 +15,8 @@ export class WorkerCardComponent implements OnInit {
   ngOnInit() {
   }
 
+  onShowDetailedDataAboutChosenUser() {
+    console.log(this.user);
+  }
+
 }
