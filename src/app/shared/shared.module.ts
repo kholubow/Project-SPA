@@ -6,6 +6,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { FileUploadModule } from 'ng2-file-upload';
 
 @NgModule({
   imports: [
@@ -13,6 +14,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
+    FileUploadModule,
     BsDatepickerModule.forRoot()
   ],
   declarations: [
@@ -28,6 +30,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
+    FileUploadModule,
     PageNotFoundComponent
   ]
 })

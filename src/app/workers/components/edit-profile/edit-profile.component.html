@@ -1,3 +1,114 @@
 <body [ngStyle]="{'background-image': 'url(' + bgEditProfile + ')'}">
 
+    <div class = "text-center">
+        <div class = "info-block center">
+            <div class = "scroll">
+                <div class = "center">
+                    <i class="fa fa-id-badge" 
+                       style="font-size:30px">
+                       Nowe zdjęcie główne:
+                    </i>
+                    
+                    <div class="row">
+                            <div class="PhotoUploader">
+                     
+                                <div ng2FileDrop
+                                     [ngClass]="{'nv-file-over': hasBaseDropZoneOver}"
+                                     (fileOver)="fileOverBase($event)"
+                                     [uploader]="uploader"
+                                     class="well my-drop-zone">
+                                     <i class = "fa fa-upload"
+                                        style = "font-size:48px;">
+                                     </i>
+                                     Przeciągnij zdjęcie tutaj
+                                </div>
+                    
+                            </div>
+                     
+                            <div class="queueZoneAfterChoosePhotos" 
+                                 style="margin-bottom: 40px"
+                                 *ngIf="uploader?.queue?.length">
+                     
+                                <h3>
+                                    Kolejka wysyłania
+                                </h3>
+                                <p>
+                                    Długość kolejki: {{ uploader?.queue?.length }}
+                                </p>
+                     
+                                <table class="table">
+                    
+                                    <thead>
+                                    <tr>
+                                        <th width="50%">
+                                            Nazwa
+                                        </th>
+                                        <th>
+                                            Rozmiar
+                                        </th>
+                                    </tr>
+                                    </thead>
+                    
+                    
+                                    <tbody>
+                                    <tr *ngFor="let item of uploader.queue">
+                                        <td>
+                                            <strong>
+                                                {{ item?.file?.name }}
+                                            </strong>
+                                        </td>
+                                        <td *ngIf="uploader.options.isHTML5" 
+                                            nowrap>
+                                            {{ item?.file?.size/1024/1024 | number:'.2' }} MB
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                    
+                                </table>
+                     
+                    
+                    
+                                <div>
+                                    <div>
+                                        Postęp wysyłania:
+                                        <div class="progress">
+                                                <div class="progress-bar" 
+                                                     role="progressbar" 
+                                                     [ngStyle]="{ 'width': uploader.progress + '%' }">
+                                                </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" 
+                                            class="btn btn-success btn-s"
+                                            (click)="uploader.uploadAll()" 
+                                            [disabled]="!uploader.getNotUploadedItems().length">
+                                                <span class="glyphicon glyphicon-upload">
+                                                </span> 
+                                                Wyślij
+                                    </button>
+                                    <button type="button" 
+                                            class="btn btn-warning btn-s"
+                                            (click)="uploader.cancelAll()" 
+                                            [disabled]="!uploader.isUploading">
+                                                <span class="glyphicon glyphicon-ban-circle">
+                                                </span>
+                                                Wyjdź
+                                    </button>
+                                    <button type="button" 
+                                            class="btn btn-danger btn-s"
+                                            (click)="uploader.clearQueue()" 
+                                            [disabled]="!uploader.queue.length">
+                                                <span class="glyphicon glyphicon-trash">
+                                                </span>
+                                                Usuń
+                                    </button>
+                                </div>
+                            </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
