@@ -65,12 +65,12 @@
                                   <span class = "help-block" 
                                         *ngIf = "registerForm.get('password').hasError('minlength') && registerForm.get('password').touched" 
                                         style = "color:red;" >
-                                        Hasło musi zawierać co najmniej 4 znaki
+                                        Hasło musi zawierać co najmniej 8 znaków
                                   </span>
                                   <span class = "help-block" 
                                         *ngIf = "registerForm.get('password').hasError('maxlength') && registerForm.get('password').touched" 
                                         style = "color:red;" >
-                                        Hasło nie może przekraczać 8 znaków
+                                        Hasło nie może przekraczać 16 znaków
                                   </span>
                           </div>
 
@@ -102,17 +102,66 @@
                                   <label class="radio-inline">
                                   <input class="mr-3" 
                                          type="radio" 
-                                         value="male" 
+                                         value="Mezczyzna" 
                                          formControlName="gender" >
                                          Mężczyzna
                                   </label>
                                   <label class="radio-inline" >
                                   <input class="mr-3" 
                                          type="radio" 
-                                         value="female" 
+                                         value="Kobieta" 
                                          formControlName="gender" >
                                          Kobieta
                                   </label>
+                          </div>
+
+                          <div class="group">
+                                   <label class="control-label" 
+                                          style="margin-right:10px" >
+                                          Stanowisko 
+                                   </label>
+                                   <label class="radio-inline">
+                                   <input class="mr-3" 
+                                          type="radio" 
+                                          value="tester" 
+                                          formControlName="position" >
+                                          Tester
+                                   </label>
+                                   <label class="radio-inline" >
+                                   <input class="mr-3" 
+                                          type="radio" 
+                                          value="programista" 
+                                          formControlName="position" >
+                                          Programista
+                                   </label>
+                                   <label class="radio-inline" >
+                                   <input class="mr-3" 
+                                          type="radio" 
+                                          value="stazysta" 
+                                          formControlName="position" >
+                                          Stażysta
+                                   </label>
+                                   <label class="radio-inline" >
+                                   <input class="mr-3" 
+                                          type="radio" 
+                                          value="informatyk" 
+                                          formControlName="position" >
+                                          Informatyk
+                                   </label>
+                                   <label class="radio-inline" >
+                                   <input class="mr-3" 
+                                          type="radio" 
+                                          value="mlodszy programista" 
+                                          formControlName="position" >
+                                          Młodszy programista
+                                   </label>
+                                   <label class="radio-inline" >
+                                   <input class="mr-3" 
+                                          type="radio" 
+                                          value="kierownik projektow" 
+                                          formControlName="position" >
+                                          Kierownik projektów
+                                   </label>
                           </div>
 
                           <div class="group">
@@ -150,33 +199,7 @@
                                         Data urodzin jest wymagana
                                   </span>
                           </div>
-
-                          <div class="group">
-                                  <textarea class = "input" 
-                                            placeholder="Opis" 
-                                            rows = "6" 
-                                            formControlName="introduction" >
-                                  </textarea>
-                                  <span class = "help-block" 
-                                        *ngIf = "registerForm.get('introduction').touched && registerForm.get('introduction').hasError('required') || registerForm.get('introduction').errors && registerForm.get('introduction').touched" 
-                                        style = "color:red;" >
-                                        Podanie swojego opisu jest wymagane
-                                  </span>
-                          </div>
-
-                          <div class="group">
-                                  <textarea class = "input" 
-                                            placeholder="Zainteresowania" 
-                                            rows = "6" 
-                                            formControlName="interests" >
-                                  </textarea>
-                                  <span class = "help-block" 
-                                        *ngIf = "registerForm.get('interests').touched && registerForm.get('interests').hasError('required') || registerForm.get('interests').errors && registerForm.get('interests').touched" 
-                                        style = "color:red;" >
-                                        Podanie swoich zainteresowań jest wymagane
-                                  </span>
-                          </div>
-                        
+                    
                           <div class="group">
                               <input type="submit" 
                                      class="button" 

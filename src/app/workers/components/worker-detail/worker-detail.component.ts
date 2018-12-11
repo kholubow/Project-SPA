@@ -35,14 +35,6 @@ export class WorkerDetailComponent implements OnInit {
     this.chooseInfo = 'gender';
   }
 
-  onClickInterests() {
-    this.chooseInfo = 'interests';
-  }
-
-  onClickIntroduction() {
-    this.chooseInfo = 'introduction';
-  }
-
   onClickName() {
     this.chooseInfo = 'name';
   }
@@ -53,6 +45,10 @@ export class WorkerDetailComponent implements OnInit {
 
   onClickDateOfBirth() {
     this.chooseInfo = 'dateOfBirth';
+  }
+
+  onClickPosition() {
+    this.chooseInfo = 'position';
   }
 
 }

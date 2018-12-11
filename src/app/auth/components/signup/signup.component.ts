@@ -30,20 +30,19 @@ user: User;
       this.createRegisterForm();
   }
 
-  
+
   createRegisterForm() {
       this.registerForm = this.fb.group({
-            gender: ['male'],
+            gender: ['Kobieta'],
+            position: ['tester'],
             username: ['', Validators.required],
             userSurname: ['', Validators.required],
             dateOfBirth: [null, Validators.required],
             city: ['', Validators.required],
             country: ['', Validators.required],
-            introduction: ['', Validators.required],
-            interests: ['', Validators.required],
             password: ['', [Validators.required,
-                            Validators.minLength(4),
-                            Validators.maxLength(8)]],
+                            Validators.minLength(8),
+                            Validators.maxLength(16)]],
             confirmPassword: ['', Validators.required]
           }, {
             validator: this.passwordMatchValidator

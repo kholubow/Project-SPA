@@ -17,6 +17,10 @@
                                (click) = "onClickSurname()">
                                Nazwisko
                             </i>
+                            <i class="fa fa-briefcase"
+                               (click) = "onClickPosition()">
+                               Stanowisko
+                            </i>
                             <i class="fa fa-child"
                                (click) = "onClickDateOfBirth()">
                                Data urodzenia
@@ -33,14 +37,6 @@
                                (click) = "onClickGender()">
                                Płeć
                             </i>
-                            <i class="fa fa-lightbulb-o"
-                               (click) = "onClickInterests()">
-                               Zainteresowania
-                            </i>
-                            <i class="fa fa-street-view"
-                               (click) = "onClickIntroduction()">
-                               Opis
-                            </i>
                     </div>
                     <p *ngIf = "(chooseInfo == 'name')">
                            {{ user.username }}
@@ -54,17 +50,14 @@
                     <p *ngIf = "(chooseInfo == 'country')">
                            {{ user.country }}
                     </p>
-                    <p *ngIf = "(chooseInfo == 'interests')">
-                           {{ user.interests }}
-                    </p>
-                    <p *ngIf = "(chooseInfo == 'introduction')">
-                           {{ user.introduction }}
-                    </p>
                     <p *ngIf = "(chooseInfo == 'surname')">
                            {{ user.userSurname }}
                     </p>
                     <p *ngIf = "(chooseInfo == 'dateOfBirth')">
                            {{ user.dateOfBirth }}
+                    </p>
+                    <p *ngIf = "(chooseInfo == 'position')">
+                           {{ user.position }}
                     </p>
             </div>
 
