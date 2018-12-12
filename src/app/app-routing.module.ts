@@ -1,7 +1,7 @@
+import { ShowInstancesComponent } from './workers/components/show-instances/show-instances.component';
 import { WorkerDetailComponent } from './workers/components/worker-detail/worker-detail.component';
 import { SignupComponent } from './auth/components/signup/signup.component';
 import { InstanceComponent } from './workers/components/instance/instance.component';
-import { MessagesComponent } from './workers/components/messages/messages.component';
 import { AllWorkersComponent } from './workers/components/all-workers/all-workers.component';
 import { EndComponent } from './auth/components/end/end.component';
 import { StartComponent } from './auth/components/start/start.component';
@@ -20,7 +20,7 @@ const appRoutes: Routes = [
     { path: 'start', component: StartComponent },
     { path: 'end', component: EndComponent },
     { path: 'wszyscy', component: AllWorkersComponent },
-    { path: 'messages', component: MessagesComponent },
+    { path: 'pokaz-wnioski', component: ShowInstancesComponent },
     { path: 'wnioski', component: InstanceComponent },
     { path: 'edytuj-profil', component: EditProfileComponent },
     { path: 'dane-profilu', component: WorkerDetailComponent },

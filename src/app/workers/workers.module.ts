@@ -2,11 +2,11 @@ import { AppRoutingModule } from './../app-routing.module';
 import { SharedModule } from './../shared/shared.module';
 import { NgModule } from '@angular/core';
 import { AllWorkersComponent } from './components/all-workers/all-workers.component';
-import { MessagesComponent } from './components/messages/messages.component';
 import { InstanceComponent } from './components/instance/instance.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 import { WorkerCardComponent } from './components/worker-card/worker-card.component';
 import { WorkerDetailComponent } from './components/worker-detail/worker-detail.component';
+import { ShowInstancesComponent } from './components/show-instances/show-instances.component';
 
 @NgModule({
   imports: [
@@ -15,22 +15,22 @@ import { WorkerDetailComponent } from './components/worker-detail/worker-detail.
   ],
   declarations: [
     AllWorkersComponent,
-    MessagesComponent,
     InstanceComponent,
     EditProfileComponent,
     WorkerCardComponent,
-    WorkerDetailComponent
+    WorkerDetailComponent,
+    ShowInstancesComponent
   ],
   providers: [
 
   ],
   exports: [
     AllWorkersComponent,
-    MessagesComponent,
     InstanceComponent,
     EditProfileComponent,
     WorkerCardComponent,
-    WorkerDetailComponent
+    WorkerDetailComponent,
+    ShowInstancesComponent
   ],
 })
 

@@ -25,18 +25,11 @@ users: User[];
   loadUsers() {
 
     this.userService.getUsers().subscribe((res: User[]) => {
-
         this.users = res;
-        console.log(this.users);
         this.alertify.success('Dane o użytkownikach zostały pobrane pomyślnie');
-
     }, error => {
-
         this.alertify.error('Nie udało się pobrać wszystkich użytkowników');
-
     });
   }
-
-
 
 }

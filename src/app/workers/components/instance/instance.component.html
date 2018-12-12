@@ -1,20 +1,129 @@
 <body [ngStyle]="{'background-image': 'url(' + bgInstance + ')'}">
 
+    <div class="login-wrap">
+        <div class="login-html">
 
-    <div class = "text-center">
-        <div class = "info-block center">
-            <div class = "scroll">
-                <div class = "center">
 
-                    <i class="fa fa-file-text-o" 
-                       style="font-size:30px">
-                       Złóż nowy wniosek:
-                    </i>
+		        <i class="fa fa-clipboard" 
+		           style="font-size:40px">
+		        </i>
 
-                </div>
-            </div>
+		        <label class="title">
+			           Złóż nowy wniosek:
+		        </label>
+
+
+		        <div class="login-form">
+
+                  <form (ngSubmit)="onSendInstance()" 
+                        [formGroup] = "instanceForm">
+
+                          <div class="group">
+                                  <input class = "input"
+                                         placeholder = "Data rozpoczęcia" 
+                                         formControlName = "instanceStart" 
+                                         type = "text"
+                                         bsDatepicker
+                                         [bsConfig] = "bsConfig" >
+                                  <span class = "help-block" 
+                                        *ngIf = "instanceForm.get('instanceStart').touched && instanceForm.get('instanceStart').hasError('required') || instanceForm.get('instanceStart').errors && instanceForm.get('instanceStart').touched" 
+                                        style = "color:red;" >
+                                        Data rozpoczęcia urlopu jest wymagana
+                                  </span>
+                          </div>
+                    
+                          <div class="group">
+                                    <input class = "input"
+                                           placeholder = "Data zakończenia" 
+                                           formControlName = "instanceEnd" 
+                                           type = "text"
+                                           bsDatepicker
+                                           [bsConfig] = "bsConfig" >
+                                    <span class = "help-block" 
+                                          *ngIf = "instanceForm.get('instanceEnd').touched && instanceForm.get('instanceEnd').hasError('required') || instanceForm.get('instanceEnd').errors && instanceForm.get('instanceEnd').touched" 
+                                          style = "color:red;" >
+                                          Data zakończenia urlopu jest wymagana
+                                    </span>      
+                          </div>
+
+                          <div class="group text-center">
+                                <label class="control-label" 
+                                       style="margin-right:10px" >
+                                       Typ wniosku / urlopu: 
+                                </label>
+                                <label class="radio">
+                                <input class="mr-3" 
+                                       type="radio" 
+                                       value="wypoczynkowy" 
+                                       formControlName="typeOfInstance" >
+                                       Wypoczynkowy
+                                </label>
+                                <label class="radio" >
+                                <input class="mr-3" 
+                                       type="radio" 
+                                       value="urlop bezplatny" 
+                                       formControlName="typeOfInstance" >
+                                       Urlop bezpłatny
+                                </label>
+                                <label class="radio" >
+                                <input class="mr-3" 
+                                       type="radio" 
+                                       value="urlop macierzynski" 
+                                       formControlName="typeOfInstance" >
+                                       Urlop macierzyński
+                                </label>
+                                <label class="radio" >
+                                <input class="mr-3" 
+                                       type="radio" 
+                                       value="urlop tacierzynski" 
+                                       formControlName="typeOfInstance" >
+                                       Urlop tacierzyński
+                                </label>
+                                <label class="radio" >
+                                <input class="mr-3" 
+                                       type="radio" 
+                                       value="urlop na zadanie" 
+                                       formControlName="typeOfInstance" >
+                                       Urlop na żądanie
+                                </label>
+                                <label class="radio" >
+                                <input class="mr-3" 
+                                       type="radio" 
+                                       value="urlop okolicznosciowy" 
+                                       formControlName="typeOfInstance" >
+                                       Urlop okolicznościowy
+                                </label>
+                          </div>
+
+                          <div class = "group">
+                                <textarea class = "input"
+                                          placeholder = "Treść wniosku" 
+                                          formControlName = "content" 
+                                          type = "text"
+                                          rows = "8" >
+                                </textarea>
+                                <span class = "help-block" 
+                                      *ngIf = "instanceForm.get('content').touched && instanceForm.get('content').hasError('required') || instanceForm.get('content').errors && instanceForm.get('content').touched" 
+                                      style = "color:red;" >
+                                      Podanie treści wniosku jest wymagane
+                                </span> 
+                          </div>
+
+                          <div class="group">
+                              <input type="submit" 
+                                     class="button" 
+                                     value="Złóż wniosek" 
+                                     [disabled]="!instanceForm.valid">
+                          </div>
+
+                     
+                  </form>
+
+        
+		        </div>
+
+
         </div>
     </div>
-
 
 </body>

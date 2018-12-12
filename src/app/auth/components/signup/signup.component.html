@@ -32,6 +32,11 @@
                                         style = "color:red;">
                                         Proszę wpisać imię
                                   </span>
+                                  <span class = "help-block" 
+                                        *ngIf = "registerForm.get('username').touched && registerForm.get('username').value.toLowerCase() === 'kadrowy' " 
+                                        style = "color:red;" >
+                                        Nie możesz nazywać się " Kadrowy "
+                                  </span>
                           </div>
 
                           <div class = "group">
@@ -115,47 +120,47 @@
                                   </label>
                           </div>
 
-                          <div class="group">
+                          <div class="group text-center">
                                    <label class="control-label" 
                                           style="margin-right:10px" >
                                           Stanowisko 
                                    </label>
-                                   <label class="radio-inline">
+                                   <label class="radio">
                                    <input class="mr-3" 
                                           type="radio" 
                                           value="tester" 
                                           formControlName="position" >
                                           Tester
                                    </label>
-                                   <label class="radio-inline" >
+                                   <label class="radio" >
                                    <input class="mr-3" 
                                           type="radio" 
                                           value="programista" 
                                           formControlName="position" >
                                           Programista
                                    </label>
-                                   <label class="radio-inline" >
+                                   <label class="radio" >
                                    <input class="mr-3" 
                                           type="radio" 
                                           value="stazysta" 
                                           formControlName="position" >
                                           Stażysta
                                    </label>
-                                   <label class="radio-inline" >
+                                   <label class="radio" >
                                    <input class="mr-3" 
                                           type="radio" 
                                           value="informatyk" 
                                           formControlName="position" >
                                           Informatyk
                                    </label>
-                                   <label class="radio-inline" >
+                                   <label class="radio" >
                                    <input class="mr-3" 
                                           type="radio" 
                                           value="mlodszy programista" 
                                           formControlName="position" >
                                           Młodszy programista
                                    </label>
-                                   <label class="radio-inline" >
+                                   <label class="radio" >
                                    <input class="mr-3" 
                                           type="radio" 
                                           value="kierownik projektow" 

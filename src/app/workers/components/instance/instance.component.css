@@ -6,37 +6,96 @@ body {
 	min-height: 1000px;
 }
 
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
+.login-wrap {
+	width:100%;
+	margin:auto;
+	max-width:600px;
+	min-height:1000px;
+	position:relative;
+	background: no-repeat center;
 }
 
-.info-block {
-	margin-top: 0;
-	height: 1000px;
-	width: 650px;
-	background-color: rgba(13, 112, 130, 0.7);
+.login-html {
+	width:100%;
+	height:100%;
+	position:absolute;
+	padding:20px 70px 50px 70px;
+	background:rgba(40,57,101,.9);
 }
 
-.scroll {
-	max-height: 925px; 
-	overflow-y: scroll;
+
+/*----------------------
+		#Form title
+----------------------*/
+.title {
+    text-transform:uppercase;
+    font-size: 35px;
 }
 
-.scroll::-webkit-scrollbar {
-	width: 12px;
-	background: transparent;
+
+/*----------------------
+		#Form
+----------------------*/
+.login-form {
+	min-height:345px;
+	position:relative;
+	perspective:1000px;
+	margin-top: 5%;
 }
 
-.scroll::-webkit-scrollbar-track {
-	border-radius: 10px;
-	background: #c2c9d3;
+/*  Settings for all form div main groups - 3 groups  */
+.login-form .group {
+	margin-bottom:15px;
 }
 
-.scroll::-webkit-scrollbar-thumb {
-	border-radius: 10px;
-	background: #919396;
-	opacity: 0.6
+/*  Settings - looking of inputs fields and buttons */
+.login-form .group .label,
+.login-form .group .input,
+.login-form .group .button {
+	width:100%;
+	color:#fff;
+    display:block;
+}
+
+/*  Settings - font styles - labels (titles of inputs), buttons for user */
+.login-form .group .label,
+.login-form .group .button {
+    text-transform:uppercase;
+}
+
+/*  Settings - looking of inputs fields and buttons */
+.login-form .group .input,
+.login-form .group .button {
+	border:none;
+	padding:15px 20px;
+	border-radius:25px;
+	background:rgba(255,255,255,.1);
+}
+
+/*  Settings - for input in one of the groups - password - hiding the letters */
+.login-form .group input[data-type="password"] {
+	text-security:circle;
+	-webkit-text-security:circle;
+}
+
+.login-form .group .label{
+	color:#aaa;
+	font-size:12px;
+}
+
+.login-form .group .button{
+	background:#1161ee;
+}
+
+
+/*----------------------
+		#Responsive
+----------------------*/
+@media screen and (max-width: 647px) {
+	.title {
+		font-size: 30px;
+	}
+	i {
+		display: none;
+	}
 }

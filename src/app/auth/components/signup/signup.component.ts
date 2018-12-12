@@ -64,8 +64,7 @@ user: User;
           }, error => {
             this.alertify.error('Wystąpił błąd podczas rejestracji');
           });
-          }
+      }
   }
-
 
 }

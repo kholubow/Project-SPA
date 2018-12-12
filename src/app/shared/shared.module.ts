@@ -1,3 +1,4 @@
+import { DataService } from './services/data.service';
 import { UserService } from './services/user.service';
 import { AlertifyService } from './services/alertify.service';
 import { BsDatepickerModule } from 'ngx-bootstrap';
@@ -22,7 +23,8 @@ import { FileUploadModule } from 'ng2-file-upload';
   ],
   providers: [
     AlertifyService,
-    UserService
+    UserService,
+    DataService
   ],
   exports: [
     BrowserModule,
