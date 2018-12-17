@@ -18,7 +18,8 @@
                                </i>
                             </a>
                         </li>
-                        <li routerLinkActive="active">
+                        <li routerLinkActive="active"
+                            *ngIf="authService.decodedToken.unique_name !== 'kadrowy'">
                             <a routerLink="/wnioski">
                                Złóż nowy wniosek
                                <i class="fa fa-inbox" 
@@ -26,7 +27,8 @@
                                </i>
                             </a>
                         </li>
-                        <li routerLinkActive="active">                                                    
+                        <li routerLinkActive="active"
+                            *ngIf="authService.decodedToken.unique_name == 'kadrowy'">                                                    
                             <a routerLink="/pokaz-wnioski">
                                Pokaż wszystkie wnioski
                                <i class="fa fa-comments-o" 

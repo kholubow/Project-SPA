@@ -17,6 +17,11 @@ constructor(private http: Http,
         return this.http.post(this.baseUrl + 'users/addInstance/' + userId, instance, this.jwt());
     }
 
+    onGetInstances(): Observable<Instance[]> {
+        return this.http.get(this.baseUrl + 'users/getInstances', this.jwt())
+                        .map(response => <Instance[]>response.json());
+    }
+
     private jwt() {
         let token = localStorage.getItem('token');
         if (token) {

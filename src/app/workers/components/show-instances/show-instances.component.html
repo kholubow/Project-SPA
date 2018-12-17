@@ -3,16 +3,125 @@
 
     <div class = "text-center">
         <div class = "info-block center">
-            <div class = "scroll">
-                <div class = "center">
+                <div class = "content">
 
                     <i class="fa fa-file-text-o" 
-                       style="font-size:30px">
+                       style="font-size:30px;margin-top:3%">
                        Wnioski złożone przez pracowników:
                     </i>
 
+                    <div class="container">
+                        <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                            <div class="scroll">  
+                  
+                  
+                                                      <table>
+                  
+                                                      <thead>
+                                                      <th class="contentCol">
+                                                            Treść
+                                                            <i class="fa fa-file-text-o" 
+                                                               style="font-size:24px;padding-left:5px;">
+                                                            </i>
+                                                      </th> 
+                                                      <th class="instanceStartCol">
+                                                            Początek urlopu
+                                                            <i class="fa fa-calendar-check-o" 
+                                                               style="font-size:24px;padding-left:5px;">
+                                                            </i>
+                                                      </th>
+                                                      <th class="instanceEndCol">
+                                                            Koniec urlopu
+                                                            <i class="fa fa-calendar-times-o" 
+                                                               style="font-size:24px;padding-left:5px;">
+                                                            </i>
+                                                      </th>
+                                                      <th class="usernameCol">
+                                                            Imie
+                                                            <i class="fa fa-address-card-o" 
+                                                               style="font-size:24px;padding-left:5px;">
+                                                            </i>
+                                                      </th>
+                                                      <th class="userSurnameCol">
+                                                            Nazwisko
+                                                            <i class="fa fa-id-badge" 
+                                                               style="font-size:24px;padding-left:5px;">
+                                                            </i>
+                                                      </th>
+                                                      <th class="positionCol">
+                                                            Stanowisko
+                                                            <i class="fa fa-briefcase" 
+                                                               style="font-size:24px;padding-left:5px;">
+                                                            </i>
+                                                      </th>
+                                                      <th class="typeOfInstanceCol">
+                                                            Typ urlopu
+                                                            <i class="fa fa-gear" 
+                                                               style="font-size:24px;padding-left:5px;">
+                                                            </i>
+                                                      </th>
+                  
+                                                      </thead>
+                  
+                                                      <tbody *ngFor="let instance of instances">
+                                                      <tr (click)="isCollapsed = !isCollapsed && checkInstanceId(instance.id)">
+                                                            <td class="contentCol"> 
+                                                                  {{ instance.content }} 
+                                                            </td> 
+                                                            <td class="instanceStartCol"> 
+                                                                  {{ instance.instanceStart | date: 'shortDate' }}
+                                                            </td>
+                                                            <td class="instanceEndCol">
+                                                                  {{ instance.instanceEnd | date: 'shortDate' }}
+                                                            </td>  
+                                                            <td class="usernameCol">
+                                                                  {{ instance.username }}
+                                                            </td>
+                                                            <td class="userSurnameCol"> 
+                                                                  {{ instance.userSurname }} 
+                                                            </td>
+                                                            <td class="positionCol"> 
+                                                                  {{ instance.position }} 
+                                                            </td>
+                                                            <td class="typeOfInstanceCol"> 
+                                                                  {{ instance.typeOfInstance }} 
+                                                            </td>
+                                                      </tr> 
+                  
+                                                      <tr *ngIf="(isCollapsed) && instance.id == instanceId">
+                                                            <td colspan="2">
+                                                                  <div>
+                                                                  Imie: {{ instance.username }}
+                                                                  </div>
+                                                            </td>
+                                                            <td colspan="2">
+                                                                  <div>
+                                                                  Nazwisko: {{ instance.userSurname }}
+                                                                  </div>
+                                                            </td>
+                                                            <td colspan="3">
+                                                                  <div>
+                                                                        <button type="button" 
+                                                                                class="btn btn-info">
+                                                                                Zatwierdź wniosek
+                                                                        </button>
+                                                                  </div>
+                                                            </td>
+                                                      </tr>
+                                                      </tbody>
+                  
+                                                </table>
+                  
+                  
+                                            </div>
+                                    
+                                </div>
+                        </div>
+                    </div>
+                  
+    
                 </div>
-            </div>
         </div>
     </div>
 

@@ -6,6 +6,7 @@ import { BsDatepickerConfig } from 'ngx-bootstrap';
 import { Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Instance } from '../../../shared/models/Instance';
+import { getDate } from 'ngx-bootstrap/chronos/utils/date-getters';
 
 
 @Component({
@@ -18,13 +19,22 @@ bgInstance: string;
 instanceForm: FormGroup;
 bsConfig: Partial<BsDatepickerConfig>;
 instance: Instance;
+minDate: Date;
+maxDate: Date;
 
 
   constructor(public dataService: DataService,
               public authService: AuthService,
               private alertify: AlertifyService,
               private router: Router,
-              private fb: FormBuilder) { }
+              private fb: FormBuilder) {
+
+                    this.minDate = new Date();
+                    this.maxDate = new Date();
+                    this.minDate.setDate(this.minDate.getDate() + 0);
+
+               }
+
 
   ngOnInit() {
       this.bgInstance = 'assets/images/BGsignin2.jpg';
@@ -38,12 +48,18 @@ instance: Instance;
   createInstanceForm() {
       this.instanceForm = this.fb.group({
 
-            instanceStart: [null, Validators.required],
+            instanceStart: [this.minDate, Validators.required],
             instanceEnd: [null, Validators.required],
             typeOfInstance: ['wypoczynkowy'],
             content: ['', Validators.required]
 
       });
+  }
+
+
+  changeMaxDateViaInputEvent() {
+     this.maxDate = new Date();
+     this.maxDate.setDate(getDate(this.instanceForm.get('instanceStart').value) + 26);
   }
 
 

@@ -24,7 +24,9 @@
                                          formControlName = "instanceStart" 
                                          type = "text"
                                          bsDatepicker
-                                         [bsConfig] = "bsConfig" >
+                                         (bsValueChange) = "changeMaxDateViaInputEvent($event)"
+                                         [bsConfig] = "bsConfig"
+                                         [minDate]="minDate" >
                                   <span class = "help-block" 
                                         *ngIf = "instanceForm.get('instanceStart').touched && instanceForm.get('instanceStart').hasError('required') || instanceForm.get('instanceStart').errors && instanceForm.get('instanceStart').touched" 
                                         style = "color:red;" >
@@ -38,7 +40,9 @@
                                            formControlName = "instanceEnd" 
                                            type = "text"
                                            bsDatepicker
-                                           [bsConfig] = "bsConfig" >
+                                           [bsConfig] = "bsConfig"
+                                           [minDate]="minDate"
+                                           [maxDate]="maxDate" >
                                     <span class = "help-block" 
                                           *ngIf = "instanceForm.get('instanceEnd').touched && instanceForm.get('instanceEnd').hasError('required') || instanceForm.get('instanceEnd').errors && instanceForm.get('instanceEnd').touched" 
                                           style = "color:red;" >
