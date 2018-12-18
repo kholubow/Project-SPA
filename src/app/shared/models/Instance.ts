@@ -8,4 +8,6 @@ export interface Instance {
     userSurname: string;
     position: string;
     typeOfInstance: string;
+    approval: string;
+    reason: string;
 }

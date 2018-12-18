@@ -1,3 +1,4 @@
+import { AuthService } from './../../../auth/shared/services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { FileUploader } from 'ng2-file-upload';
 
@@ -10,10 +11,10 @@ export class EditProfileComponent implements OnInit {
   bgEditProfile: string;
   uploader: FileUploader;
   hasBaseDropZoneOver = false;
-  baseUrl = '';
+  baseUrl = 'http://localhost:5000/api/';
 
 
-  constructor() { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit() {
     this.bgEditProfile = 'assets/images/BGsignin2.jpg';
@@ -28,7 +29,7 @@ export class EditProfileComponent implements OnInit {
 
   initializeUploader() {
     this.uploader = new FileUploader({
-            url: '',
+            url: this.baseUrl + 'users/addPhoto/' + this.authService.decodedToken.nameid,
             authToken: 'Bearer ' + localStorage.getItem('token'),
             isHTML5: true,
             allowedFileType: ['image'],
