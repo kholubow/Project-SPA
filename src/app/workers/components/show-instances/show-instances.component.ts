@@ -2,6 +2,7 @@ import { Instance } from './../../../shared/models/Instance';
 import { DataService } from './../../../shared/services/data.service';
 import { Component, OnInit } from '@angular/core';
 import { AlertifyService } from '../../../shared/services/alertify.service';
+import { AuthService } from '../../../auth/shared/services/auth.service';
 
 @Component({
   selector: 'app-show-instances',
@@ -13,9 +14,11 @@ export class ShowInstancesComponent implements OnInit {
   instanceId: number;
   instances: Instance[];
   isCollapsed = true;
+  reason: string;
 
   constructor(private alertify: AlertifyService,
-              private dataService: DataService) { }
+              private dataService: DataService,
+              private authService: AuthService) { }
 
 
   ngOnInit() {
@@ -27,6 +30,25 @@ export class ShowInstancesComponent implements OnInit {
   checkInstanceId(data) {
     this.instanceId = data;
     return this.instanceId;
+  }
+
+
+  onAcceptInstance(id: number) {
+    this.dataService.onApprovalInstance(id, 'true', this.authService.decodedToken.nameid).subscribe(() => {
+        this.alertify.success('Wniosek został zaakceptowany pomyślnie');
+    }, error => {
+        this.alertify.error('Nie udało się zaakceptować wniosku');
+    });
+  }
+
+
+  onDisapprovalInstance(id: number) {
+    this.reason = window.prompt('Proszę podać powód:');
+    this.dataService.onDisapprovalInstance(id, 'false', this.reason, this.authService.decodedToken.nameid).subscribe(() => {
+        this.alertify.success('Wniosek został odrzucony pomyślnie');
+    }, error => {
+        this.alertify.error('Nie udało się odrzucić wniosku');
+    });
   }
 
 

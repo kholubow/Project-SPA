@@ -22,6 +22,16 @@ constructor(private http: Http,
                         .map(response => <Instance[]>response.json());
     }
 
+    onApprovalInstance(id: number, approval: string, userId: number) {
+        var dataToSendAsJSON = { id, approval };
+        return this.http.post(this.baseUrl + 'users/acceptInstance/' + userId, JSON.stringify(dataToSendAsJSON), this.jwt());
+    }
+
+    onDisapprovalInstance(id: number, approval: string, reason: string, userId: number) {
+        var dataToSendAsJSON = { id, approval, reason };
+        return this.http.post(this.baseUrl + 'users/disapprovalInstance/' + userId, JSON.stringify(dataToSendAsJSON), this.jwt());
+    }
+
     private jwt() {
         let token = localStorage.getItem('token');
         if (token) {

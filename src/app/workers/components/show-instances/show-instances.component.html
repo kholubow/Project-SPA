@@ -103,11 +103,13 @@
                                                             <td colspan="3">
                                                                   <div>
                                                                         <button type="button" 
-                                                                                class="btn btn-info">
+                                                                                class="btn btn-info"
+                                                                                (click)="onAcceptInstance(instance.id)">
                                                                                 Zatwierdź wniosek
                                                                         </button>
                                                                         <button type="button" 
-                                                                                class="btn btn-danger">
+                                                                                class="btn btn-danger"
+                                                                                (click)="onDisapprovalInstance(instance.id)">
                                                                                 Odrzuć wniosek
                                                                         </button>
                                                                   </div>

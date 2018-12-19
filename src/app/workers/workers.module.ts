@@ -7,6 +7,7 @@ import { EditProfileComponent } from './components/edit-profile/edit-profile.com
 import { WorkerCardComponent } from './components/worker-card/worker-card.component';
 import { WorkerDetailComponent } from './components/worker-detail/worker-detail.component';
 import { ShowInstancesComponent } from './components/show-instances/show-instances.component';
+import { ShowMyInstancesComponent } from './components/show-my-instances/show-my-instances.component';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { ShowInstancesComponent } from './components/show-instances/show-instanc
     EditProfileComponent,
     WorkerCardComponent,
     WorkerDetailComponent,
-    ShowInstancesComponent
+    ShowInstancesComponent,
+    ShowMyInstancesComponent
   ],
   providers: [
 
@@ -30,7 +32,8 @@ import { ShowInstancesComponent } from './components/show-instances/show-instanc
     EditProfileComponent,
     WorkerCardComponent,
     WorkerDetailComponent,
-    ShowInstancesComponent
+    ShowInstancesComponent,
+    ShowMyInstancesComponent
   ],
 })
 

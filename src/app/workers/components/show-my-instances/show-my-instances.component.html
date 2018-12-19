@@ -1,0 +1,108 @@
+<body [ngStyle]="{'background-image': 'url(' + bgShowMyInstances + ')'}">
+
+
+  <div class = "text-center">
+      <div class = "info-block center">
+              <div class = "content">
+
+                  <i class="fa fa-file-text-o" 
+                     style="font-size:30px;margin-top:3%">
+                     Twoje wnioski:
+                  </i>
+
+                  <div class="container">
+                      <div class="row">
+                              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                          <div class="scroll">  
+                
+                
+                                                    <table>
+                
+                                                    <thead>
+                                                    <th class="contentCol">
+                                                          Treść
+                                                          <i class="fa fa-file-text-o" 
+                                                             style="font-size:24px;padding-left:5px;">
+                                                          </i>
+                                                    </th> 
+                                                    <th class="instanceStartCol">
+                                                          Początek urlopu
+                                                          <i class="fa fa-calendar-check-o" 
+                                                             style="font-size:24px;padding-left:5px;">
+                                                          </i>
+                                                    </th>
+                                                    <th class="instanceEndCol">
+                                                          Koniec urlopu
+                                                          <i class="fa fa-calendar-times-o" 
+                                                             style="font-size:24px;padding-left:5px;">
+                                                          </i>
+                                                    </th>
+                                                    <th class="positionCol">
+                                                          Stanowisko
+                                                          <i class="fa fa-briefcase" 
+                                                             style="font-size:24px;padding-left:5px;">
+                                                          </i>
+                                                    </th>
+                                                    <th class="typeOfInstanceCol">
+                                                          Typ urlopu
+                                                          <i class="fa fa-gear" 
+                                                             style="font-size:24px;padding-left:5px;">
+                                                          </i>
+                                                    </th>
+                                                    <th class="approvalCol">
+                                                          Decyzja
+                                                          <i class="fa fa-address-card-o" 
+                                                             style="font-size:24px;padding-left:5px;">
+                                                          </i>
+                                                    </th>
+                                                    <th class="reasonCol">
+                                                          Powód
+                                                          <i class="fa fa-id-badge" 
+                                                             style="font-size:24px;padding-left:5px;">
+                                                          </i>
+                                                    </th>                                         
+                
+                                                    </thead>
+                
+                                                    <tbody *ngFor="let instance of instances">
+                                                    <tr>
+                                                          <td class="contentCol"> 
+                                                                {{ instance.content }} 
+                                                          </td> 
+                                                          <td class="instanceStartCol"> 
+                                                                {{ instance.instanceStart | date: 'shortDate' }}
+                                                          </td>
+                                                          <td class="instanceEndCol">
+                                                                {{ instance.instanceEnd | date: 'shortDate' }}
+                                                          </td>  
+                                                          <td class="positionCol"> 
+                                                                {{ instance.position }} 
+                                                          </td>
+                                                          <td class="typeOfInstanceCol"> 
+                                                                {{ instance.typeOfInstance }} 
+                                                          </td>
+                                                          <td class="approvalCol">
+                                                                {{ instance.approval }}
+                                                          </td>
+                                                          <td class="reasonCol"> 
+                                                                {{ instance.reason }} 
+                                                          </td>                                                 
+                                                    </tr> 
+                                                    </tbody>
+                
+                                                    </table>
+                
+                
+                                          </div>
+                                  
+                              </div>
+                      </div>
+                  </div>
+                
+  
+              </div>
+      </div>
+  </div>
+
+
+</body>
