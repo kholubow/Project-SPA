@@ -51,13 +51,13 @@
                                                     </th>
                                                     <th class="approvalCol">
                                                           Decyzja
-                                                          <i class="fa fa-address-card-o" 
+                                                          <i class="fa fa-check-square-o" 
                                                              style="font-size:24px;padding-left:5px;">
                                                           </i>
                                                     </th>
                                                     <th class="reasonCol">
                                                           Powód
-                                                          <i class="fa fa-id-badge" 
+                                                          <i class="fa fa-question" 
                                                              style="font-size:24px;padding-left:5px;">
                                                           </i>
                                                     </th>                                         
@@ -82,7 +82,12 @@
                                                                 {{ instance.typeOfInstance }} 
                                                           </td>
                                                           <td class="approvalCol">
-                                                                {{ instance.approval }}
+                                                                <p *ngIf="instance.approval == 'true'">
+                                                                   Zaakceptowano
+                                                                </p>
+                                                                <p *ngIf="instance.approval == 'false'">
+                                                                   Odrzucono
+                                                                </p>
                                                           </td>
                                                           <td class="reasonCol"> 
                                                                 {{ instance.reason }} 

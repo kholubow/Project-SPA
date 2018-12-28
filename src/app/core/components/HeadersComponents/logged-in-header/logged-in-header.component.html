@@ -28,6 +28,15 @@
                             </a>
                         </li>
                         <li routerLinkActive="active"
+                            *ngIf="authService.decodedToken.unique_name !== 'kadrowy'">
+                            <a routerLink="/moje-wnioski">
+                               Moje wnioski
+                               <i class="fa fa-file-o" 
+                                  style="font-size:24px;padding-left:5px;">
+                               </i>
+                            </a>
+                        </li>
+                        <li routerLinkActive="active"
                             *ngIf="authService.decodedToken.unique_name == 'kadrowy'">                                                    
                             <a routerLink="/pokaz-wnioski">
                                Pokaż wszystkie wnioski

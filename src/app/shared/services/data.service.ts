@@ -22,6 +22,11 @@ constructor(private http: Http,
                         .map(response => <Instance[]>response.json());
     }
 
+    onGetAllInstancesForWorker(userId: number): Observable<Instance[]> {
+        return this.http.get(this.baseUrl + 'users/getInstancesForWorker/' + userId, this.jwt())
+                        .map(response => <Instance[]>response.json());
+    }
+
     onApprovalInstance(id: number, approval: string, userId: number) {
         var dataToSendAsJSON = { id, approval };
         return this.http.post(this.baseUrl + 'users/acceptInstance/' + userId, JSON.stringify(dataToSendAsJSON), this.jwt());

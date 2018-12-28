@@ -11,6 +11,7 @@ import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
 import { EditProfileComponent } from './workers/components/edit-profile/edit-profile.component';
+import { ShowMyInstancesComponent } from './workers/components/show-my-instances/show-my-instances.component';
 
 const appRoutes: Routes = [
 
@@ -21,6 +22,7 @@ const appRoutes: Routes = [
     { path: 'end', component: EndComponent },
     { path: 'wszyscy', component: AllWorkersComponent },
     { path: 'pokaz-wnioski', component: ShowInstancesComponent },
+    { path: 'moje-wnioski', component: ShowMyInstancesComponent },
     { path: 'wnioski', component: InstanceComponent },
     { path: 'edytuj-profil', component: EditProfileComponent },
     { path: 'dane-profilu', component: WorkerDetailComponent },
