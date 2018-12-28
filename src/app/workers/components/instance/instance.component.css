@@ -1,3 +1,6 @@
+/*----------------------
+	#Main Div's classes
+----------------------*/
 body {
     margin:0;
     color:black;
@@ -43,7 +46,7 @@ body {
 	margin-top: 5%;
 }
 
-/*  Settings for all form div main groups - 3 groups  */
+/*  Settings for all form div main groups - 5 groups  */
 .login-form .group {
 	margin-bottom:15px;
 }

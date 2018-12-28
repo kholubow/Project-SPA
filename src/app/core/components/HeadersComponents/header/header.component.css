@@ -12,11 +12,11 @@
 /*----------------------
 		#Phone number top left
 ----------------------*/
-.top-number{
+.top-number {
     color: #fff;
 }
   
-.top-number p{
+.top-number p {
     margin: 0
 }
   
@@ -24,12 +24,12 @@
 /*----------------------
 		#Social links right top
 ----------------------*/
-.social{
+.social {
     text-align: right;
 }
   
 /*  ul - all social links -  */
-.social-share{
+.social-share {
    display: inline-block;
    list-style: none;
    padding: 0;

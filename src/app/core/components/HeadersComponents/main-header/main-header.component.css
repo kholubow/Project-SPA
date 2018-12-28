@@ -1,7 +1,7 @@
 /*----------------------
 		#Navbar logo image left
 ----------------------*/
-.navbar>.container .navbar-brand{
+.navbar>.container .navbar-brand {
     margin-left: 0;
 }
 
@@ -36,7 +36,7 @@
 /*----------------------
 		#Navbar links
 ----------------------*/
-.navbar-nav>li{
+.navbar-nav>li {
     margin-left: 35px;
     padding-bottom: 28px;
     list-style: none;
@@ -52,7 +52,7 @@
     text-decoration: none;
 }
 
-.navbar-inverse .navbar-nav > li > a:hover{
+.navbar-inverse .navbar-nav > li > a:hover {
     background-color: #c52d2f;
     color: #fff;
 }
@@ -61,7 +61,7 @@
 /*----------------------
 		#Settings for all navbar links
 ----------------------*/
-.navbar-nav{
+.navbar-nav {
     margin-top: 12px;
 }
 
