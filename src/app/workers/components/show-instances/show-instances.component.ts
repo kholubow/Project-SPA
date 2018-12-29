@@ -37,7 +37,7 @@ export class ShowInstancesComponent implements OnInit {
     this.dataService.onApprovalInstance(id, 'true', this.authService.decodedToken.nameid).subscribe(() => {
         this.alertify.success('Wniosek został zaakceptowany pomyślnie');
     }, error => {
-        this.alertify.error('Nie udało się zaakceptować wniosku');
+        this.alertify.error('Minimalna ilość pracowników na tym samym stanowisku, którzy muszą zostać: 2');
     });
   }
 
