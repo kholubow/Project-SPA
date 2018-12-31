@@ -7,7 +7,7 @@ import { EndComponent } from './auth/components/end/end.component';
 import { StartComponent } from './auth/components/start/start.component';
 import { SigninComponent } from './auth/components/signin/signin.component';
 import { HomeComponent } from './components/HomePageComponents/home/home.component';
-import { NgModule, Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
 import { EditProfileComponent } from './workers/components/edit-profile/edit-profile.component';

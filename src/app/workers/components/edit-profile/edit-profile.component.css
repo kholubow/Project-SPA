@@ -55,3 +55,43 @@ input[type = file] {
 th {
 	text-align: center;
 }
+
+
+/*----------------------
+		#Responsive
+----------------------*/
+@media screen and (max-width: 667px) {
+    .info-block {
+          width: 450px;
+    }
+    body {
+          font: 10px;
+    }
+    .my-drop-zone {
+          width: 330px;
+    }
+}
+
+@media screen and (max-width: 467px) {
+    .info-block {
+          width: 300px;
+    }
+    body {
+          font: 10px;
+    }
+    .my-drop-zone {
+          width: 230px;
+    }
+}
+
+@media screen and (max-width: 317px) {
+    .info-block {
+          width: 250px;
+    }
+    body {
+          font: 10px;
+    }
+    .my-drop-zone {
+          width: 200px;
+    }
+}

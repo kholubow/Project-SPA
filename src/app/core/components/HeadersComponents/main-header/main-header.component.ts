@@ -13,7 +13,7 @@ export class MainHeaderComponent implements OnInit {
   ngOnInit() {
   }
 
-  
+
   logout() {
       this.authService.logout();
   }
@@ -21,6 +21,6 @@ export class MainHeaderComponent implements OnInit {
 
   chechIfSomeUserIsLoggedInViaToken() {
       return this.authService.chechIfSomeUserIsLoggedInViaDownloadedToken();
-  }  
+  }
 
 }

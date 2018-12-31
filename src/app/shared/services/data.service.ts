@@ -2,7 +2,7 @@ import { Instance } from './../models/Instance';
 import { Injectable } from '@angular/core';
 import { RequestOptions, Headers, Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
-import { Router } from '@angular/router';
+
 
 @Injectable()
 export class DataService {
@@ -10,8 +10,7 @@ export class DataService {
 baseUrl = 'http://localhost:5000/api/';
 instance: Instance;
 
-constructor(private http: Http,
-            private router: Router) {}
+constructor(private http: Http) {}
 
     onSendInstance(instance: Instance, userId: number) {
         return this.http.post(this.baseUrl + 'users/addInstance/' + userId, instance, this.jwt());

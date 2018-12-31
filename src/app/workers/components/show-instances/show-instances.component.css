@@ -114,7 +114,6 @@ tr:hover td {
 	text-align: center;
 }
 
-
 /*  Table Scrollbar  */
 .scroll {
 	max-height: 500px; 
@@ -153,4 +152,58 @@ tr:hover td {
 	margin-left: 0;
 	padding-left: 0;
 	padding-right: 0;
+}
+
+@media screen and (max-width: 1317px) {
+    .info-block {
+		width: 800px;
+	}
+	th {
+		font-size: 11px;
+	}
+	td {
+		font-size: 13px;
+	}
+}
+
+@media screen and (max-width: 817px) {
+    .info-block {
+		width: 600px;
+	}
+	th {
+		font-size: 9px;
+	}
+	td {
+		font-size: 11px;
+	}
+}
+
+@media screen and (max-width: 617px) {
+    .info-block {
+		width: 450px;
+	}
+	th {
+		font-size: 8px;
+	}
+	td {
+		font-size: 9px;
+	}
+	i {
+		font-size: 8px;
+	}
+}
+
+@media screen and (max-width: 467px) {
+    .info-block {
+		width: 300px;
+	}
+	th {
+		font-size: 8px;
+	}
+	td {
+		font-size: 9px;
+	}
+	i {
+		font-size: 8px;
+	}
 }
