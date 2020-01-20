@@ -1,3 +1,5 @@
+import { ShowBillsComponent } from './workers/components/show-bills/show-bills.component';
+import { AddBillComponent } from './workers/components/add-bill/add-bill.component';
 import { ShowInstancesComponent } from './workers/components/show-instances/show-instances.component';
 import { WorkerDetailComponent } from './workers/components/worker-detail/worker-detail.component';
 import { SignupComponent } from './auth/components/signup/signup.component';
@@ -20,6 +22,8 @@ const appRoutes: Routes = [
     { path: 'rejestracja', component: SignupComponent },
     { path: 'start', component: StartComponent },
     { path: 'end', component: EndComponent },
+    { path: 'dodawanie-faktury', component: AddBillComponent },
+    { path: 'pokaz-faktury', component: ShowBillsComponent },
     { path: 'wszyscy', component: AllWorkersComponent },
     { path: 'pokaz-wnioski', component: ShowInstancesComponent },
     { path: 'moje-wnioski', component: ShowMyInstancesComponent },

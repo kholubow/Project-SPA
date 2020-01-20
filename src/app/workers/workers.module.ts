@@ -8,6 +8,8 @@ import { WorkerCardComponent } from './components/worker-card/worker-card.compon
 import { WorkerDetailComponent } from './components/worker-detail/worker-detail.component';
 import { ShowInstancesComponent } from './components/show-instances/show-instances.component';
 import { ShowMyInstancesComponent } from './components/show-my-instances/show-my-instances.component';
+import { AddBillComponent } from './components/add-bill/add-bill.component';
+import { ShowBillsComponent } from './components/show-bills/show-bills.component';
 
 @NgModule({
   imports: [
@@ -21,7 +23,9 @@ import { ShowMyInstancesComponent } from './components/show-my-instances/show-my
     WorkerCardComponent,
     WorkerDetailComponent,
     ShowInstancesComponent,
-    ShowMyInstancesComponent
+    ShowMyInstancesComponent,
+    AddBillComponent,
+    ShowBillsComponent
   ],
   providers: [
 
@@ -33,7 +37,8 @@ import { ShowMyInstancesComponent } from './components/show-my-instances/show-my
     WorkerCardComponent,
     WorkerDetailComponent,
     ShowInstancesComponent,
-    ShowMyInstancesComponent
+    ShowMyInstancesComponent,
+    AddBillComponent
   ],
 })
 

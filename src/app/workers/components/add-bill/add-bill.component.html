@@ -1,0 +1,138 @@
+<body [ngStyle]="{'background-image': 'url(' + bgInstance + ')'}">
+
+  <div class="login-wrap">
+      <div class="login-html">
+
+
+          <i class="fa fa-clipboard" 
+             style="font-size:40px">
+          </i>
+
+          <label class="title">
+               Stwórz fakturę:
+          </label>
+
+
+          <div class="login-form">
+
+                <form (ngSubmit)="onSendBill()" 
+                      [formGroup] = "billForm">
+                  
+                      <div class = "group">
+                        <textarea class = "input"
+                                  placeholder = "Nazwa faktury" 
+                                  formControlName = "Name" 
+                                  type = "text"
+                                  rows = "2" >
+                        </textarea>
+                        <span class = "help-block" 
+                              *ngIf = "billForm.get('Name').touched && billForm.get('Name').hasError('required') || billForm.get('Name').errors && billForm.get('Name').touched" 
+                              style = "color:red;" >
+                              Podanie nazwy faktury jest wymagane
+                        </span> 
+                      </div>
+
+                      <div class = "group">
+                        <textarea class = "input"
+                                  placeholder = "Sprzedawca" 
+                                  formControlName = "Salesman" 
+                                  type = "text"
+                                  rows = "3" >
+                        </textarea>
+                        <span class = "help-block" 
+                              *ngIf = "billForm.get('Salesman').touched && billForm.get('Salesman').hasError('required') || billForm.get('Salesman').errors && billForm.get('Salesman').touched" 
+                              style = "color:red;" >
+                              Podanie sprzedawcy jest wymagane
+                        </span> 
+                      </div>
+
+                      <div class = "group">
+                        <textarea class = "input"
+                                  placeholder = "Nabywca" 
+                                  formControlName = "Buyer" 
+                                  type = "text"
+                                  rows = "3" >
+                        </textarea>
+                        <span class = "help-block" 
+                              *ngIf = "billForm.get('Buyer').touched && billForm.get('Buyer').hasError('required') || billForm.get('Buyer').errors && billForm.get('Buyer').touched" 
+                              style = "color:red;" >
+                              Podanie nabywcy jest wymagane
+                        </span> 
+                      </div>
+
+                      <div class = "group">
+                        <textarea class = "input"
+                                  placeholder = "Cena" 
+                                  formControlName = "Price" 
+                                  type = "number"
+                                  rows = "1" >
+                        </textarea>
+                        <span class = "help-block" 
+                              *ngIf = "billForm.get('Price').touched && billForm.get('Price').hasError('required') || billForm.get('Price').errors && billForm.get('Price').touched" 
+                              style = "color:red;" >
+                              Podanie ceny jest wymagane
+                        </span> 
+                      </div>               
+
+                        <div class="group text-center">
+                              <label class="control-label" 
+                                     style="margin-right:10px" >
+                                     Rodzaj płatności: 
+                              </label>
+                              <label class="radio">
+                              <input class="mr-3" 
+                                     type="radio" 
+                                     value="Gotowka" 
+                                     formControlName="PaymentMethod" >
+                                     Gotówka
+                              </label>
+                              <label class="radio" >
+                              <input class="mr-3" 
+                                     type="radio" 
+                                     value="Karta" 
+                                     formControlName="PaymentMethod" >
+                                     Karta
+                              </label>
+                              <label class="radio" >
+                              <input class="mr-3" 
+                                     type="radio" 
+                                     value="Blik" 
+                                     formControlName="PaymentMethod" >
+                                     Blik
+                              </label>
+                        </div>
+
+                        <div class = "group">
+                              <textarea class = "input"
+                                        placeholder = "Opis usługi" 
+                                        formControlName = "ServiceName" 
+                                        type = "text"
+                                        rows = "9" >
+                              </textarea>
+                              <span class = "help-block" 
+                                    *ngIf = "billForm.get('ServiceName').touched && billForm.get('ServiceName').hasError('required') || billForm.get('ServiceName').errors && billForm.get('ServiceName').touched" 
+                                    style = "color:red;" >
+                                    Podanie usługi jest wymagane
+                              </span> 
+                        </div>
+
+
+
+                        <div class="group">
+                            <input type="submit" 
+                                   class="button" 
+                                   value="Stwórz fakturę" 
+                                   [disabled]="!billForm.valid">
+                        </div>
+
+                   
+                </form>
+
+      
+          </div>
+
+
+      </div>
+  </div>
+
+</body>

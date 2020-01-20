@@ -1,0 +1,102 @@
+<body [ngStyle]="{'background-image': 'url(' + bgShowInstances + ')'}">
+
+
+  <div class = "text-center">
+      <div class = "info-block center">
+              <div class = "content">
+
+                  <i class="fa fa-file-text-o" 
+                     style="font-size:30px;margin-top:3%">
+                     Lista wszystkich faktur:
+                  </i>
+
+                  <div class="container">
+                      <div class="row">
+                              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                          <div class="scroll">  
+                
+                
+                                                    <table>
+                
+                                                    <thead>
+                                                    <th class="nameCol">
+                                                          Nazwa
+                                                          <i class="fa fa-pencil-square" 
+                                                             style="font-size:24px;padding-left:5px;">
+                                                          </i>
+                                                    </th> 
+                                                    <th class="salesmanCol">
+                                                          Sprzedawca
+                                                          <i class="fa fa-user" 
+                                                             style="font-size:24px;padding-left:5px;">
+                                                          </i>
+                                                    </th>
+                                                    <th class="buyerCol">
+                                                          Nabywca
+                                                          <i class="fa fa-user" 
+                                                             style="font-size:24px;padding-left:5px;">
+                                                          </i>
+                                                    </th>
+                                                    <th class="serviceCol">
+                                                          Opis usługi
+                                                          <i class="fa fa-pencil" 
+                                                             style="font-size:24px;padding-left:5px;">
+                                                          </i>
+                                                    </th>
+                                                    <th class="priceCol">
+                                                          Cena
+                                                          <i class="fa fa-dollar" 
+                                                             style="font-size:24px;padding-left:5px;">
+                                                          </i>
+                                                    </th>
+                                                    <th class="paymentMethodCol">
+                                                          Rodzaj płatności
+                                                          <i class="fa fa-credit-card" 
+                                                             style="font-size:24px;padding-left:5px;">
+                                                          </i>
+                                                    </th>
+                
+                                                    </thead>
+                
+                                                    <tbody *ngFor="let bill of bills">
+                                                    <tr (click)="isCollapsed = !isCollapsed && checkBillId(bill.id)">
+                                                          <td class="nameCol"> 
+                                                                {{ bill.name }} 
+                                                          </td>
+                                                          <td class="salesmanCol">
+                                                                {{ bill.salesman }}
+                                                          </td>
+                                                          <td class="buyerCol"> 
+                                                                {{ bill.buyer }} 
+                                                          </td>
+                                                          <td class="serviceCol"> 
+                                                                {{ bill.serviceName }} 
+                                                          </td>
+                                                          <td class="priceCol"> 
+                                                                {{ bill.price }} 
+                                                          </td>
+                                                          <td class="paymentMethodCol"> 
+                                                                {{ bill.paymentMethod }} 
+                                                          </td>                             
+                                                    </tr> 
+                
+                                                    <tr *ngIf="(isCollapsed) && bill.id == billId">
+                                                    </tr>
+                                                    </tbody>
+                
+                                              </table>
+                
+                
+                                          </div>
+                                  
+                              </div>
+                      </div>
+                  </div>
+                
+  
+              </div>
+      </div>
+  </div>
+
+
+</body>

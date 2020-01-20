@@ -1,3 +1,4 @@
+import { Bill } from './../models/Bill';
 import { Instance } from './../models/Instance';
 import { Injectable } from '@angular/core';
 import { RequestOptions, Headers, Http } from '@angular/http';
@@ -9,6 +10,7 @@ export class DataService {
 
 baseUrl = 'http://localhost:5000/api/';
 instance: Instance;
+bill: Bill;
 
 constructor(private http: Http) {}
 
@@ -16,9 +18,18 @@ constructor(private http: Http) {}
         return this.http.post(this.baseUrl + 'users/addInstance/' + userId, instance, this.jwt());
     }
 
+    onSendBill(bill: Bill, userId: number) {
+        return this.http.post(this.baseUrl + 'users/addBill/' + userId, bill, this.jwt());
+    }
+
     onGetInstances(): Observable<Instance[]> {
         return this.http.get(this.baseUrl + 'users/getInstances', this.jwt())
                         .map(response => <Instance[]>response.json());
+    }
+
+    onGetBills(): Observable<Bill[]> {
+        return this.http.get(this.baseUrl + 'users/getBills', this.jwt())
+                        .map(response => <Bill[]>response.json());
     }
 
     onGetAllInstancesForWorker(userId: number): Observable<Instance[]> {
